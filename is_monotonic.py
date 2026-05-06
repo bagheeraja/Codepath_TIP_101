@@ -2,18 +2,11 @@ def is_monotonic(nums: list) -> bool:
     # empty and single element lists are considered monotonic. Test for empty cases first to avoid ValueErrors.
     # Test for single element lists next.
 
-    #zip() may be the better method to handle this. zip() will not return an error for empty or single element lists.
+    # zip() may be the better method to handle this. zip() will not return an error for empty or single element lists.
+    # zip() basically assumes True for empty lists and single element lists
+
+    # use two Boolean variables to track increasing and descreasing
     
-    # check first element to see if it is min or max of the list
-    # if the list does not start with min or max it can't be monotonic
-
-    # if first element is min save first element for comparison, pop first element while the list is not empty
-    # if the list is empty after all items have been compared and popped it was monotonic
-
-    # if first element is max save current element for comparison, pop element, compare while the list is not empty
-    # if the list is empty after all items have bee compared and popped it was monotonic
-
-    # if any of the comparisons fail, return False.
     increasing = True
     decreasing = True
 
